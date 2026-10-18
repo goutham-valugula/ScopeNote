@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="description" content="A calm, private way for freelancers to price and explain extra client requests before the work begins." />
+    <title>ScopeNote — make the extra work clear</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="ScopeNote home"><span class="brand-mark">s.</span><span>scopenote</span></a>
+      <span class="privacy"><span class="privacy-dot"></span>Private by default · saved on this device</span>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A little clarity, before the extra work</p>
+          <h1>Keep good work<br /><em>in scope.</em></h1>
+          <p class="hero-intro">When a client asks for one more thing, turn the request into a clear, calm next step—with the cost and timing out in the open.</p>
+          <div class="hero-proof"><span class="proof-icon">✳</span><span>No account. No awkward script. Just the details, clearly laid out.</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-card"><div class="art-card-head"><span>PROJECT NOTE</span><span class="art-spark">✳</span></div><div class="art-line line-long"></div><div class="art-line line-mid"></div><div class="art-pill">A clear next step <span>↗</span></div></div>
+          <div class="art-sticker">GOOD WORK<br />DESERVES<br />CLEAR SCOPE.</div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Change request builder">
+        <div class="builder-column">
+          <div class="section-heading"><div><span class="step">01</span><div><h2>Set the context</h2><p>A few basics make the note feel like yours.</p></div></div><span class="optional">YOUR DETAILS</span></div>
+          <div class="form-grid">
+            <label>Your name or studio<input id="sender" type="text" placeholder="e.g. Alex Morgan" /></label>
+            <label>Client name<input id="client" type="text" placeholder="e.g. Jamie" /></label>
+            <label class="wide">Project<input id="project" type="text" placeholder="e.g. Website refresh" /></label>
+          </div>
+
+          <div class="section-heading second-heading"><div><span class="step">02</span><div><h2>What changed?</h2><p>Keep it factual. You can always refine the wording.</p></div></div><span class="optional">THE REQUEST</span></div>
+          <div class="form-stack">
+            <label>What was originally included?<textarea id="scope" rows="3" placeholder="e.g. Five-page website, two rounds of revisions, copy supplied by the client"></textarea></label>
+            <label>What are they asking for now?<textarea id="request" rows="3" placeholder="e.g. Add a blog section with category pages and a reusable article layout"></textarea></label>
+          </div>
+
+          <div class="section-heading second-heading"><div><span class="step">03</span><div><h2>Make the impact clear</h2><p>Choose the path that works best for both of you.</p></div></div><span class="optional">THE OPTIONS</span></div>
+          <div class="choice-row" role="group" aria-label="How to handle the new request">
+            <button class="choice active" data-mode="add" type="button"><span class="choice-symbol">＋</span><span><b>Add to the project</b><small>Price the extra work</small></span></button>
+            <button class="choice" data-mode="swap" type="button"><span class="choice-symbol">⇄</span><span><b>Swap something out</b><small>Keep the budget steady</small></span></button>
+            <button class="choice" data-mode="later" type="button"><span class="choice-symbol">↗</span><span><b>Plan it for later</b><small>Keep today’s scope intact</small></span></button>
+          </div>
+          <div class="impact-panel" id="impactPanel">
+            <div class="price-controls">
+              <label>Added fee<div class="money-field"><select id="currency" aria-label="Currency"><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option><option value="CAD">CAD $</option><option value="AUD">AUD $</option><option value="SGD">SGD $</option><option value="INR">INR ₹</option><option value="MYR">MYR RM</option></select><input id="fee" inputmode="decimal" type="number" min="0" step="0.01" placeholder="0.00" /></div></label>
+              <label>Extra time<div class="unit-field"><input id="days" inputmode="numeric" type="number" min="0" step="1" placeholder="0" /><span>working days</span></div></label>
+            </div>
+            <label id="swapWrap" class="conditional hidden">What would you swap out?<input id="swapItem" type="text" placeholder="e.g. The resource library page" /></label>
+            <label id="laterWrap" class="conditional hidden">When could it be revisited?<input id="laterDate" type="text" placeholder="e.g. In a separate phase next month" /></label>
+            <p class="panel-note"><span>✳</span> You’re not saying no—you’re making the trade-off visible.</p>
+          </div>
+          <label class="tone-label">Note style<select id="tone"><option value="warm">Warm and straightforward</option><option value="concise">Short and direct</option><option value="formal">Polished and formal</option></select></label>
+          <div class="privacy-note"><span class="lock">⌑</span><span><b>Your draft stays yours.</b> It is saved only in this browser. Nothing is uploaded or sent for you.</span></div>
+        </div>
+
+        <aside class="preview-column">
+          <div class="preview-head"><div><span class="preview-kicker">YOUR CLIENT NOTE</span><h2>Clear feels good.</h2></div><span class="preview-spark">✳</span></div>
+          <div class="preview-card">
+            <div class="preview-meta"><span id="previewProject">PROJECT NOTE</span><span id="previewDate"></span></div>
+            <h3 id="previewTitle">A quick note about the project</h3>
+            <div class="preview-rule"></div>
+            <div id="previewText" class="preview-text">Add a client and describe the new request to see your note take shape here.</div>
+            <div class="impact-summary" id="impactSummary"><div><span>ADDED FEE</span><b id="summaryFee">—</b></div><div><span>EXTRA TIME</span><b id="summaryDays">—</b></div></div>
+            <div class="preview-signoff" id="previewSignoff">Thanks,<br /><b id="previewSender">Your name</b></div>
+          </div>
+          <div class="preview-actions"><button id="copyBtn" class="primary-button" type="button"><span>Copy client note</span><span>↗</span></button><button id="printBtn" class="secondary-button" type="button">Print / save as PDF</button></div>
+          <div class="gentle-reminder"><span class="reminder-icon">✳</span><p><b>A gentle pause is a professional move.</b><br />Wait for a clear yes before you begin the added work.</p></div>
+          <button id="resetBtn" class="reset-button" type="button">Start a fresh note <span>↻</span></button>
+        </aside>
+      </section>
+
+      <section class="bottom-note"><span class="bottom-star">✳</span><p><b>Good relationships need clear expectations.</b><br />ScopeNote helps you talk about the work—not make legal decisions. Your existing agreement still matters.</p><span class="bottom-doodle">✎</span></section>
+    </main>
+    <footer><span>scopenote <span class="footer-dot">✳</span></span><span>A small tool for independent work.</span></footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
