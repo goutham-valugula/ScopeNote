@@ -1,14 +1,14 @@
 # ScopeNote
 
-**Make the extra work clear before it starts.** ScopeNote is a small, private tool for freelancers who need to discuss a new client request without turning it into an awkward conversation.
+**Make the extra work clear before it starts.** ScopeNote is a browser-based tool for freelancers who need to discuss a new client request without turning it into an awkward conversation.
 
-Describe the original scope and the new ask. Then choose whether to price it as an addition, trade it for something already included, or revisit it later. ScopeNote prepares a client-ready note with the cost and schedule impact where relevant. Copy it or print/save it as a PDF.
+Describe the original scope and the new ask. Choose whether to price it as an addition, trade it for something already included, or revisit it later. ScopeNote prepares a client-ready note with the cost and schedule impact where relevant. Copy it or print/save it as a PDF.
 
 ## Why this exists
 
-Freelancers describe losing real time and money when small additions accumulate. In one recent discussion, a freelancer estimated that unpriced requests added 23 hours and $2,300 to a single project. A Scottish creative-industry survey also found that 59% of respondents had experienced unclear or unreasonable expectations in freelance work. These are signals of a recurring problem, not proof of demand for this particular tool.
+Freelancers describe losing real time and money when small additions accumulate. In one public discussion, a freelancer estimated that unpriced requests added 23 hours and $2,300 to a project. A Scottish creative-industry survey also found that 59% of respondents had experienced unclear or unreasonable expectations in freelance work. These are signals of a recurring problem, not proof of demand for this particular tool.
 
-Scope-change generators and full freelancer platforms already exist, so this is not presented as a new category. ScopeNote is a deliberately small, no-account, browser-only conversation aid with three practical paths: add the request for a fee, trade it against included work, or defer it. Whether this particular version is useful enough to adopt still needs real-user feedback. It does not replace a contract, project manager, invoicing app, or legal adviser.
+Scope-change generators and full freelancer platforms already exist. ScopeNote is a deliberately small, no-account conversation aid with three practical paths: add the request for a fee, trade it against included work, or defer it. This is an initial public release; direct review and feedback are welcome. It does not replace a contract, project manager, invoicing app, or legal adviser.
 
 ## Use it
 
@@ -26,11 +26,11 @@ Drafts are saved to this browser's local storage. Nothing is uploaded or sent. A
 - The generated wording is a communication aid, not legal advice or a contract amendment.
 - Review and adapt the wording before sending it.
 - A client note does not replace the terms of an existing agreement.
-- This prototype has no account, analytics, backend, or external API.
+- This app has no account, analytics, backend, or external API.
 
 ## Development
 
-The app is plain HTML, CSS, and JavaScript. To serve locally, run for example:
+The app is plain HTML, CSS, and JavaScript. To serve locally, run:
 
 ```sh
 python3 -m http.server 8000
